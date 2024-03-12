@@ -53,9 +53,9 @@ public class HomeController {
     }
 
     @GetMapping("/getAlien")
-    public String getAlien(@RequestParam int aId,Model model) {
+    public String getAlien(@RequestParam int id,Model model) {
 
-        model.addAttribute("result", repository.getReferenceById(aId));
+        model.addAttribute("result", repository.getReferenceById(id));
         return "show";
     }
 
